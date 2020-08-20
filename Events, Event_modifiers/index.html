@@ -1,0 +1,27 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>VueJS Tutorial</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+    <div id="vue-app">
+        <h1>Events</h1>
+        
+        <button v-on:click.once="add(1)">Add an year</button>
+        <button @click="subtract(1)">Subtract an year</button>
+        <button v-on:dblclick="add(10)">Add 10 years</button>
+        <button v-on:dblclick="subtract(10)">Subtract 10 years</button>
+        <p>My Age is {{ age }}</p>
+        <div id="canvas" v-on:mousemove="updateXY">
+            {{X}},{{Y}}
+        </div>
+        <a v-on:click.prevent="click" href="https://www.facebook.com">Facebook</a>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
